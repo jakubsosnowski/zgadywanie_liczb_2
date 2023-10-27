@@ -5,7 +5,7 @@ max = 1000
 # computer using 10 moves to guess number.
 # user answer the questions
 for _ in range(10):
-    guess = round((max - min)/2 + min)
+    guess = ((max - min) // 2 + min)
     print(f"Zgaduję: {guess}")
     print("Zgadłem?")
     answer = input("TAK/NIE? ")
