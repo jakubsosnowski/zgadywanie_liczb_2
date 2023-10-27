@@ -9,27 +9,27 @@ for _ in range(10):
     print(f"Zgaduję: {guess}")
     print("Zgadłem?")
     answer = input("TAK/NIE? ")
-    if answer == 'TAK':
+    if answer.upper() == 'TAK':
         print('Wygrałem')
         break
-    elif answer == 'NIE':
+    elif answer.upper() == 'NIE':
         print("Za dużo?")
         answer = input("TAK/NIE? ")
-        if answer == 'TAK':
+        if answer.upper() == 'TAK':
             max = guess
-        elif answer == 'NIE':
+        elif answer.upper() == 'NIE':
             print("Za mało?")
             answer = input("TAK/NIE? ")
-            if answer == 'TAK':
+            if answer.upper() == 'TAK':
                 min = guess
-            elif answer == 'NIE':
+            elif answer.upper() == 'NIE':
                 print('Nie oszukuj!')
             else:
-                print('Wprowadź odpowiedź TAK/NIE (dużymi literami) i zacznij grę od początku')
+                print('Wprowadzono inną odpowiedź niż TAK lub nie. Zacznij od początku')
                 break
         else:
-            print('Wprowadź odpowiedź TAK/NIE (dużymi literami) i zacznij grę od początku')
+            print('Wprowadzono inną odpowiedź niż TAK lub nie. Zacznij od początku')
             break
     else:
-        print('Wprowadź odpowiedź TAK/NIE (dużymi literami) i zacznij grę od początku')
+        print('Wprowadzono inną odpowiedź niż TAK lub nie. Zacznij od początku')
         break
